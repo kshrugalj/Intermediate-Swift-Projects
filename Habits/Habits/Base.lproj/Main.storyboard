@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4X9-R0-bOa">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="KY2-A8-gcP">
+            <objects>
+                <collectionViewController id="e9o-SO-5UI" customClass="HomeCollectionViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HLA-U2-Md9">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OJb-0z-uRh">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LeaderboardHabit" id="GIQ-Jk-MTo" customClass="LeaderboardHabitCollectionViewCell" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="42.666666666666664" y="0.0" width="308" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="vLv-62-KUw">
+                                    <rect key="frame" x="0.0" y="0.0" width="308" height="114"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SQf-26-vew">
+                                            <rect key="frame" x="8.0000000000000071" y="7.9999999999999982" width="112.66666666666669" height="26.333333333333329"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Secondary" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz5-mY-zOv">
+                                            <rect key="frame" x="226.33333333333334" y="88" width="73.666666666666657" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leader" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roO-Bq-eww">
+                                            <rect key="frame" x="252.66666666666666" y="62" width="47.333333333333343" height="18"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SQf-26-vew" secondAttribute="trailing" constant="8" id="7Yh-ei-0Fp"/>
+                                        <constraint firstAttribute="bottom" secondItem="iz5-mY-zOv" secondAttribute="bottom" constant="8" id="EJs-nc-7a3"/>
+                                        <constraint firstItem="iz5-mY-zOv" firstAttribute="top" secondItem="roO-Bq-eww" secondAttribute="bottom" constant="8" id="JuT-qB-uh3"/>
+                                        <constraint firstItem="SQf-26-vew" firstAttribute="top" secondItem="vLv-62-KUw" secondAttribute="top" constant="8" id="Ta0-Yc-6Ph"/>
+                                        <constraint firstAttribute="trailing" secondItem="roO-Bq-eww" secondAttribute="trailing" constant="8" id="V03-IF-ksz"/>
+                                        <constraint firstItem="iz5-mY-zOv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vLv-62-KUw" secondAttribute="leading" constant="8" id="anw-Ta-baD"/>
+                                        <constraint firstItem="roO-Bq-eww" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vLv-62-KUw" secondAttribute="leading" constant="8" id="cB1-7V-64C"/>
+                                        <constraint firstItem="SQf-26-vew" firstAttribute="leading" secondItem="vLv-62-KUw" secondAttribute="leading" constant="8" id="xtE-mP-jiF"/>
+                                        <constraint firstAttribute="trailing" secondItem="iz5-mY-zOv" secondAttribute="trailing" constant="8" id="zAK-uA-DSz"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="308" height="114"/>
+                                <connections>
+                                    <outlet property="habitNameLabel" destination="SQf-26-vew" id="Hlz-fp-DyV"/>
+                                    <outlet property="leaderLabel" destination="roO-Bq-eww" id="zLU-rm-Yxi"/>
+                                    <outlet property="secondaryLabel" destination="iz5-mY-zOv" id="biu-Lh-Yrh"/>
+                                </connections>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="FollowedUser" id="BzF-OI-bkR" customClass="FollowedUserCollectionViewCell" customModule="Habits" customModuleProvider="target">
+                                <rect key="frame" x="1.6666666666666667" y="124" width="390" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sa7-MQ-Nxw">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kd5-nM-CwY">
+                                            <rect key="frame" x="8" y="7.9999999999999982" width="88.333333333333329" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Message" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4w-58-dz9">
+                                            <rect key="frame" x="32" y="44.333333333333336" width="350" height="74.666666666666657"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IWB-4t-tak">
+                                            <rect key="frame" x="19.666666666666657" y="127" width="351" height="1"/>
+                                            <color key="backgroundColor" systemColor="labelColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="vvj-wg-qT1"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="IWB-4t-tak" firstAttribute="top" secondItem="k4w-58-dz9" secondAttribute="bottom" constant="8" id="1Ls-hy-H2e"/>
+                                        <constraint firstAttribute="bottom" secondItem="IWB-4t-tak" secondAttribute="bottom" id="1pW-Df-DHM"/>
+                                        <constraint firstItem="IWB-4t-tak" firstAttribute="width" secondItem="sa7-MQ-Nxw" secondAttribute="width" multiplier="0.9" id="NdH-de-vdk"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Kd5-nM-CwY" secondAttribute="trailing" constant="8" id="Q6E-sW-19G"/>
+                                        <constraint firstItem="Kd5-nM-CwY" firstAttribute="leading" secondItem="sa7-MQ-Nxw" secondAttribute="leading" constant="8" id="WBp-s7-7wn"/>
+                                        <constraint firstItem="k4w-58-dz9" firstAttribute="leading" secondItem="Kd5-nM-CwY" secondAttribute="leading" constant="24" id="fNg-T9-UXf"/>
+                                        <constraint firstAttribute="trailing" secondItem="k4w-58-dz9" secondAttribute="trailing" constant="8" id="kmA-b7-nZL"/>
+                                        <constraint firstItem="k4w-58-dz9" firstAttribute="top" secondItem="Kd5-nM-CwY" secondAttribute="bottom" constant="16" id="mpW-Vb-gM0"/>
+                                        <constraint firstItem="Kd5-nM-CwY" firstAttribute="top" secondItem="sa7-MQ-Nxw" secondAttribute="top" constant="8" id="piD-mu-kQc"/>
+                                        <constraint firstItem="IWB-4t-tak" firstAttribute="centerX" secondItem="sa7-MQ-Nxw" secondAttribute="centerX" id="yQK-nm-i2c"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="390" height="128"/>
+                                <connections>
+                                    <outlet property="primaryTextLabel" destination="Kd5-nM-CwY" id="1Dv-6C-1Zo"/>
+                                    <outlet property="secondaryTextLabel" destination="k4w-58-dz9" id="mhn-Se-mXE"/>
+                                    <outlet property="separatorLineHeightConstraint" destination="vvj-wg-qT1" id="0WR-aW-7lR"/>
+                                    <outlet property="separatorLineView" destination="IWB-4t-tak" id="6Wn-Is-jFw"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="e9o-SO-5UI" id="Vf1-Gd-jb9"/>
+                            <outlet property="delegate" destination="e9o-SO-5UI" id="BJe-rm-puH"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Home" largeTitleDisplayMode="never" id="3Kn-1e-52b"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFU-zS-8Py" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-304.61538461538458" y="766.35071090047393"/>
+        </scene>
+        <!--Log Habit-->
+        <scene sceneID="w29-px-brz">
+            <objects>
+                <navigationController id="XSe-JE-oHM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Log Habit" image="checkmark.square.fill" catalog="system" id="YqV-GF-hC8"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="PuR-nI-mxk">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="m3y-5g-NWR" kind="relationship" relationship="rootViewController" id="cAP-Rm-nGc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6or-Tp-V7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2055.072463768116" y="27.455357142857142"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="jg7-eo-cnL">
+            <objects>
+                <navigationController id="fCp-oz-fqa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="People" image="person.2.fill" catalog="system" id="764-jB-A35"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="NQG-N5-r4Y">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rw5-qV-Jdy" kind="relationship" relationship="rootViewController" id="CEj-I5-sBI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fL9-86-nSF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268.1159420289855" y="26.785714285714285"/>
+        </scene>
+        <!--Log Habit-->
+        <scene sceneID="yGs-T7-TMI">
+            <objects>
+                <collectionViewController id="m3y-5g-NWR" customClass="LogHabitCollectionViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="tgy-Nu-xA6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4h9-fh-ZiO">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Habit" id="fBc-Sz-Ldr" customClass="UICollectionViewListCell">
+                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="js5-7n-sna">
+                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="m3y-5g-NWR" id="l7Z-NR-C9D"/>
+                            <outlet property="delegate" destination="m3y-5g-NWR" id="RBG-og-ISS"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Log Habit" id="Ejq-Lk-Nbu"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YbI-ev-7hB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2055" y="767"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="JUy-7w-ez0">
+            <objects>
+                <collectionViewController id="Rw5-qV-Jdy" customClass="UserCollectionViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="DOA-Q4-nJF">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S1Y-eg-S60">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="User" id="MRf-yh-ahX" customClass="UICollectionViewListCell">
+                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rvn-Qe-jhz">
+                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <segue destination="SMS-KW-x6h" kind="show" destinationCreationSelector="showUserDetail:sender:" id="UEF-0G-cJk"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Rw5-qV-Jdy" id="r5T-Ry-zdF"/>
+                            <outlet property="delegate" destination="Rw5-qV-Jdy" id="46h-mh-n9G"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="People" id="Szp-FB-cng"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mek-p7-uNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1268" y="767"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ndd-tr-r8s">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4X9-R0-bOa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Aae-Z8-l6K">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ZZF-o9-spa" kind="relationship" relationship="viewControllers" id="1ah-ea-MpE"/>
+                        <segue destination="slb-0u-jwZ" kind="relationship" relationship="viewControllers" id="3Kp-Ya-kC2"/>
+                        <segue destination="fCp-oz-fqa" kind="relationship" relationship="viewControllers" id="RZX-y1-Wbz"/>
+                        <segue destination="XSe-JE-oHM" kind="relationship" relationship="viewControllers" id="8i0-Ad-lBp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UAC-iL-0U9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="-775"/>
+        </scene>
+        <!--Habits-->
+        <scene sceneID="xkg-FD-Zjw">
+            <objects>
+                <collectionViewController id="iMl-Rv-Pcu" customClass="HabitCollectionViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZHE-eo-Qpi">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3B7-9j-Dpv">
+                            <size key="itemSize" width="414" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Habit" id="Pqt-wj-BGU" customClass="UICollectionViewListCell">
+                                <rect key="frame" x="-10.666666666666666" y="0.0" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wra-Zj-om8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="414" height="50"/>
+                                <connections>
+                                    <segue destination="90a-R3-0e3" kind="show" destinationCreationSelector="showHabitDetail:sender:" id="vdH-yu-bgN"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="iMl-Rv-Pcu" id="Jzs-DM-nDv"/>
+                            <outlet property="delegate" destination="iMl-Rv-Pcu" id="Kdu-Lf-Ijx"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Habits" id="BUd-tE-c3G"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMn-tz-tDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.91304347826093" y="766.74107142857144"/>
+        </scene>
+        <!--User Detail View Controller-->
+        <scene sceneID="REw-bc-PJP">
+            <objects>
+                <viewController id="SMS-KW-x6h" customClass="UserDetailViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GAb-3m-YG1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zp3-Bc-i1f">
+                                <rect key="frame" x="16" y="123" width="361" height="156"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0yz-RO-Jm8">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="118"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZXZ-kb-ceh">
+                                                <rect key="frame" x="0.0" y="1.6666666666666643" width="118" height="114.66666666666669"/>
+                                                <color key="tintColor" systemColor="systemGray6Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ZXZ-kb-ceh" secondAttribute="height" multiplier="1:1" id="lPc-hk-RVI"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0z2-fT-e1X">
+                                                <rect key="frame" x="138" y="38.666666666666657" width="223" height="40.666666666666657"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bio" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DaQ-z1-aOn">
+                                        <rect key="frame" x="0.0" y="138" width="361" height="18"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LJ3-pi-Zpx">
+                                <rect key="frame" x="0.0" y="299" width="393" height="470"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="plg-uy-kus">
+                                    <size key="itemSize" width="414" height="44"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HabitCount" id="psm-oB-zSc" customClass="UICollectionViewListCell">
+                                        <rect key="frame" x="-10.666666666666666" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BHf-UH-6Vl">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="44"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Ye-Rf-zvs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Ye-Rf-zvs" firstAttribute="trailing" secondItem="Zp3-Bc-i1f" secondAttribute="trailing" constant="16" id="5BR-NU-m0F"/>
+                            <constraint firstItem="Zp3-Bc-i1f" firstAttribute="top" secondItem="0Ye-Rf-zvs" secondAttribute="top" constant="20" id="GZN-6j-e4o"/>
+                            <constraint firstItem="Zp3-Bc-i1f" firstAttribute="leading" secondItem="0Ye-Rf-zvs" secondAttribute="leading" constant="16" id="QGX-0o-F5R"/>
+                            <constraint firstItem="0Ye-Rf-zvs" firstAttribute="bottom" secondItem="LJ3-pi-Zpx" secondAttribute="bottom" id="bGo-t4-gJR"/>
+                            <constraint firstItem="0Ye-Rf-zvs" firstAttribute="trailing" secondItem="LJ3-pi-Zpx" secondAttribute="trailing" id="kkS-5w-TXz"/>
+                            <constraint firstItem="LJ3-pi-Zpx" firstAttribute="leading" secondItem="0Ye-Rf-zvs" secondAttribute="leading" id="lzw-Hl-di3"/>
+                            <constraint firstItem="ZXZ-kb-ceh" firstAttribute="width" secondItem="GAb-3m-YG1" secondAttribute="width" multiplier="0.3" id="pcG-aL-TCf"/>
+                            <constraint firstItem="LJ3-pi-Zpx" firstAttribute="top" secondItem="Zp3-Bc-i1f" secondAttribute="bottom" constant="20" id="umb-C0-lLb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="hMa-9G-huE"/>
+                    <connections>
+                        <outlet property="bioLabel" destination="DaQ-z1-aOn" id="sDC-tL-fIX"/>
+                        <outlet property="collectionView" destination="LJ3-pi-Zpx" id="1J3-S6-r0n"/>
+                        <outlet property="profileImageView" destination="ZXZ-kb-ceh" id="cyG-dz-hiT"/>
+                        <outlet property="userNameLabel" destination="0z2-fT-e1X" id="0kh-0o-ppg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0vB-aT-6Ju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266.6666666666667" y="1495.9821428571429"/>
+        </scene>
+        <!--Habits-->
+        <scene sceneID="YJ6-6v-vaE">
+            <objects>
+                <navigationController id="slb-0u-jwZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Habits" image="star.fill" catalog="system" id="9lD-8Y-ZB9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vp9-Bi-mjx">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="iMl-Rv-Pcu" kind="relationship" relationship="rootViewController" id="Leb-Pb-8kD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IEx-OJ-4RK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.91304347826093" y="26.785714285714285"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="mNf-wB-sQr">
+            <objects>
+                <navigationController id="ZZF-o9-spa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="ZAh-xO-Bgk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8Z6-xZ-mWP">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e9o-SO-5UI" kind="relationship" relationship="rootViewController" id="3G5-o8-Ajz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjA-16-ksO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302.89855072463769" y="26.785714285714285"/>
+        </scene>
+        <!--Habit Detail View Controller-->
+        <scene sceneID="p6I-Ut-a0P">
+            <objects>
+                <viewController id="90a-R3-0e3" customClass="HabitDetailViewController" customModule="Habits" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YPS-OM-TSZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Rcx-hr-pLN">
+                                <rect key="frame" x="16" y="123" width="361" height="77"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="firstBaseline" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KNu-7M-SM4">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="40.666666666666664"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgO-Mj-LFJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="172.33333333333334" height="40.666666666666664"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W4V-t2-mwf">
+                                                <rect key="frame" x="298" y="18" width="63" height="18"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Info" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu5-8A-Gva">
+                                        <rect key="frame" x="0.0" y="56.666666666666664" width="361" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bhm-Kb-JpV">
+                                <rect key="frame" x="0.0" y="220" width="393" height="549"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0LQ-DR-OhX">
+                                    <size key="itemSize" width="414" height="44"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserCount" id="tHk-zY-n0w" customClass="UICollectionViewListCell">
+                                        <rect key="frame" x="-10.666666666666666" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eWT-GW-Rgo">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="414" height="44"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ONc-vd-rzY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ONc-vd-rzY" firstAttribute="bottom" secondItem="bhm-Kb-JpV" secondAttribute="bottom" id="BfO-XV-RqD"/>
+                            <constraint firstItem="bhm-Kb-JpV" firstAttribute="top" secondItem="Rcx-hr-pLN" secondAttribute="bottom" constant="20" id="EVg-ex-1fa"/>
+                            <constraint firstItem="ONc-vd-rzY" firstAttribute="trailing" secondItem="bhm-Kb-JpV" secondAttribute="trailing" id="XlZ-6y-UGj"/>
+                            <constraint firstItem="Rcx-hr-pLN" firstAttribute="top" secondItem="ONc-vd-rzY" secondAttribute="top" constant="20" id="Yed-Mh-DVx"/>
+                            <constraint firstItem="ONc-vd-rzY" firstAttribute="trailing" secondItem="Rcx-hr-pLN" secondAttribute="trailing" constant="16" id="bbd-KO-zsx"/>
+                            <constraint firstItem="Rcx-hr-pLN" firstAttribute="leading" secondItem="ONc-vd-rzY" secondAttribute="leading" constant="16" id="qEP-JH-WGP"/>
+                            <constraint firstItem="bhm-Kb-JpV" firstAttribute="leading" secondItem="ONc-vd-rzY" secondAttribute="leading" id="tpq-sY-nJJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="cPo-8d-2kS"/>
+                    <connections>
+                        <outlet property="categoryLabel" destination="W4V-t2-mwf" id="ZWR-Zr-7HX"/>
+                        <outlet property="collectionView" destination="bhm-Kb-JpV" id="FZa-MB-KHt"/>
+                        <outlet property="infoLabel" destination="vu5-8A-Gva" id="ZkO-0p-2wr"/>
+                        <outlet property="nameLabel" destination="HgO-Mj-LFJ" id="Snp-vE-AhP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPs-ux-Fi5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473.91304347826093" y="1495.9821428571429"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.square.fill" catalog="system" width="128" height="114"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.2.fill" catalog="system" width="128" height="86"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
